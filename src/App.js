@@ -8,16 +8,12 @@ class App extends Component {
     super(props);
     this.state = {
       textFieldVal: '',
-      textAreaVal: '',
-      selectVal: 'coconut',
-      isGoing: true,
-      numberOfGuests: 2,
-      tasks: []
+      submissions: []
     };
     this.handleChangeSelect = this.handleChangeSelect.bind(this);
     this.handleChangeTextField = this.handleChangeTextField.bind(this);
     this.handleChangeTextArea = this.handleChangeTextArea.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
+    // this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -39,22 +35,23 @@ class App extends Component {
     });
   }
 
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
-    this.setState({
-      [name]: value
-    });
-  }
+  // handleInputChange(event) {
+  //   const target = event.target;
+  //   const value = target.type === 'checkbox' ? target.checked : target.value;
+  //   const name = target.name;
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
     this.setState({
-      tasks: [
-        ...this.state.tasks,
+      textFieldVal: "",
+      submissions: [
+        ...this.state.submissions,
         {
-          value: this.state.input,
+          value: this.state.textFieldVal,
           done: false,
           id: Math.floor(Math.random() * 10000)
         }
@@ -76,50 +73,56 @@ class App extends Component {
     return false;
   };
 
-  delete = currentTask => {
-    //removes the last task added in the tasks array
-    //     this.state.tasks.splice(task, 1);
+  delete = currentsubmission => {
+    //removes the last submission added in the submissions array
+    //     this.state.submissions.splice(submission, 1);
     //     this.setState({
-    //       tasks: [...this.state.tasks]
+    //       submissions: [...this.state.submissions]
     //     });
 
-    // the above code affects this.state.tasks directly
+    // the above code affects this.state.submissions directly
     // we never want to mutate state without this.setState.
-    // Instead, consider filtering out the given task from the array
-    // and set the new filtered array to this.state.tasks
-    this.setState((state) => {
-      const newTasksArr = this.state.tasks.filter(
-        task => task.id !== currentTask.id
+    // Instead, consider filtering out the given submission from the array
+    // and set the new filtered array to this.state.submissions
+    this.setState((state, props) => {
+      const newsubmissionsArr = this.state.submissions.filter(
+        submission => submission.id !== currentsubmission.id
       );
-      // return state with the newTasks array
-      // set to tasks.
+      // return state with the newsubmissions array
+      // set to submissions.
       return {
         ...state,
-        tasks: newTasksArr
+        submissions: newsubmissionsArr
       };
     });
   };
   
-  check = currentTask => {
-    this.setState((state) => {
-      const newTasks = state.tasks.map(task => {
-        return task.value === currentTask.value
-          ? { ...task, done: !task.done }
-          : task;
-      });
-      return {
-        ...state,
-        tasks: newTasks
-      };
-    });
-  };
+  // check = currentsubmission => {
+  //   this.setState((state) => {
+  //     const newsubmissions = state.submissions.map(submission => {
+  //       return submission.value === currentsubmission.value
+  //         ? { ...submission, done: !submission.done }
+  //         : submission;
+  //     });
+  //     return {
+  //       ...state,
+  //       submissions: newsubmissions
+  //     };
+  //   });
+  // };
 
   render() {
     return (
-      <div className="container p-12">
-        <Title>React Form</Title>
-        <Form handleInputChange={this.handleInputChange} handleChangeTextField={this.handleChangeTextField} handleChangeTextArea={this.handleChangeTextArea} handleChangeSelect={this.handleChangeSelect} handleSubmit={this.handleSubmit} />
-        <Table tasks={this.state.tasks} onCheck={this.check} onDelete={this.delete} />
+      <div>
+        <div className="flex container mx-auto px-4">
+        <Title className="flex flex-wrap mx-3 mb-6 py-6 px-3">React Form</Title>
+        </div>
+        <div className="flex container mx-auto px-4">
+          <section className="w-3/5 flex-1 rounded overflow-hidden border border-zensurance-green py-6 mx-3">
+            <Form handleInputChange={this.handleInputChange} handleChangeTextField={this.handleChangeTextField} handleChangeTextArea={this.handleChangeTextArea} handleChangeSelect={this.handleChangeSelect} handleSubmit={this.handleSubmit} />
+          </section>
+          <Table submissions={this.state.submissions} onCheck={this.check} onDelete={this.delete} />
+        </div>
       </div>
     );
   }

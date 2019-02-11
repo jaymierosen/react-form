@@ -839,6 +839,10 @@ table {
   background-color: #ffebef;
 }
 
+.bg-zensurance-green {
+  background-color: #33c0b4;
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -1131,6 +1135,10 @@ table {
   background-color: #ffebef;
 }
 
+.hover\:bg-zensurance-green:hover {
+  background-color: #33c0b4;
+}
+
 .focus\:bg-transparent:focus {
   background-color: transparent;
 }
@@ -1421,6 +1429,10 @@ table {
 
 .focus\:bg-pink-lightest:focus {
   background-color: #ffebef;
+}
+
+.focus\:bg-zensurance-green:focus {
+  background-color: #33c0b4;
 }
 
 .bg-bottom {
@@ -1787,6 +1799,10 @@ table {
   border-color: #ffebef;
 }
 
+.border-zensurance-green {
+  border-color: #33c0b4;
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
@@ -2079,6 +2095,10 @@ table {
   border-color: #ffebef;
 }
 
+.hover\:border-zensurance-green:hover {
+  border-color: #33c0b4;
+}
+
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
@@ -2369,6 +2389,10 @@ table {
 
 .focus\:border-pink-lightest:focus {
   border-color: #ffebef;
+}
+
+.focus\:border-zensurance-green:focus {
+  border-color: #33c0b4;
 }
 
 .rounded-none {
@@ -2906,7 +2930,7 @@ table {
 }
 
 .font-sans {
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Montserrat, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-serif {
@@ -5126,6 +5150,10 @@ table {
   color: #ffebef;
 }
 
+.text-zensurance-green {
+  color: #33c0b4;
+}
+
 .hover\:text-transparent:hover {
   color: transparent;
 }
@@ -5418,6 +5446,10 @@ table {
   color: #ffebef;
 }
 
+.hover\:text-zensurance-green:hover {
+  color: #33c0b4;
+}
+
 .focus\:text-transparent:focus {
   color: transparent;
 }
@@ -5708,6 +5740,10 @@ table {
 
 .focus\:text-pink-lightest:focus {
   color: #ffebef;
+}
+
+.focus\:text-zensurance-green:focus {
+  color: #33c0b4;
 }
 
 .text-xs {
@@ -6436,6 +6472,10 @@ table {
     background-color: #ffebef;
   }
 
+  .sm\:bg-zensurance-green {
+    background-color: #33c0b4;
+  }
+
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -6728,6 +6768,10 @@ table {
     background-color: #ffebef;
   }
 
+  .sm\:hover\:bg-zensurance-green:hover {
+    background-color: #33c0b4;
+  }
+
   .sm\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -7018,6 +7062,10 @@ table {
 
   .sm\:focus\:bg-pink-lightest:focus {
     background-color: #ffebef;
+  }
+
+  .sm\:focus\:bg-zensurance-green:focus {
+    background-color: #33c0b4;
   }
 
   .sm\:bg-bottom {
@@ -7376,6 +7424,10 @@ table {
     border-color: #ffebef;
   }
 
+  .sm\:border-zensurance-green {
+    border-color: #33c0b4;
+  }
+
   .sm\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -7668,6 +7720,10 @@ table {
     border-color: #ffebef;
   }
 
+  .sm\:hover\:border-zensurance-green:hover {
+    border-color: #33c0b4;
+  }
+
   .sm\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -7958,6 +8014,10 @@ table {
 
   .sm\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
+  }
+
+  .sm\:focus\:border-zensurance-green:focus {
+    border-color: #33c0b4;
   }
 
   .sm\:rounded-none {
@@ -8495,7 +8555,7 @@ table {
   }
 
   .sm\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Montserrat, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .sm\:font-serif {
@@ -10699,6 +10759,10 @@ table {
     color: #ffebef;
   }
 
+  .sm\:text-zensurance-green {
+    color: #33c0b4;
+  }
+
   .sm\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -10991,6 +11055,10 @@ table {
     color: #ffebef;
   }
 
+  .sm\:hover\:text-zensurance-green:hover {
+    color: #33c0b4;
+  }
+
   .sm\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -11281,6 +11349,10 @@ table {
 
   .sm\:focus\:text-pink-lightest:focus {
     color: #ffebef;
+  }
+
+  .sm\:focus\:text-zensurance-green:focus {
+    color: #33c0b4;
   }
 
   .sm\:text-xs {
@@ -12010,6 +12082,10 @@ table {
     background-color: #ffebef;
   }
 
+  .md\:bg-zensurance-green {
+    background-color: #33c0b4;
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -12302,6 +12378,10 @@ table {
     background-color: #ffebef;
   }
 
+  .md\:hover\:bg-zensurance-green:hover {
+    background-color: #33c0b4;
+  }
+
   .md\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -12592,6 +12672,10 @@ table {
 
   .md\:focus\:bg-pink-lightest:focus {
     background-color: #ffebef;
+  }
+
+  .md\:focus\:bg-zensurance-green:focus {
+    background-color: #33c0b4;
   }
 
   .md\:bg-bottom {
@@ -12950,6 +13034,10 @@ table {
     border-color: #ffebef;
   }
 
+  .md\:border-zensurance-green {
+    border-color: #33c0b4;
+  }
+
   .md\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -13242,6 +13330,10 @@ table {
     border-color: #ffebef;
   }
 
+  .md\:hover\:border-zensurance-green:hover {
+    border-color: #33c0b4;
+  }
+
   .md\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -13532,6 +13624,10 @@ table {
 
   .md\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
+  }
+
+  .md\:focus\:border-zensurance-green:focus {
+    border-color: #33c0b4;
   }
 
   .md\:rounded-none {
@@ -14069,7 +14165,7 @@ table {
   }
 
   .md\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Montserrat, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .md\:font-serif {
@@ -16273,6 +16369,10 @@ table {
     color: #ffebef;
   }
 
+  .md\:text-zensurance-green {
+    color: #33c0b4;
+  }
+
   .md\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -16565,6 +16665,10 @@ table {
     color: #ffebef;
   }
 
+  .md\:hover\:text-zensurance-green:hover {
+    color: #33c0b4;
+  }
+
   .md\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -16855,6 +16959,10 @@ table {
 
   .md\:focus\:text-pink-lightest:focus {
     color: #ffebef;
+  }
+
+  .md\:focus\:text-zensurance-green:focus {
+    color: #33c0b4;
   }
 
   .md\:text-xs {
@@ -17584,6 +17692,10 @@ table {
     background-color: #ffebef;
   }
 
+  .lg\:bg-zensurance-green {
+    background-color: #33c0b4;
+  }
+
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -17876,6 +17988,10 @@ table {
     background-color: #ffebef;
   }
 
+  .lg\:hover\:bg-zensurance-green:hover {
+    background-color: #33c0b4;
+  }
+
   .lg\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -18166,6 +18282,10 @@ table {
 
   .lg\:focus\:bg-pink-lightest:focus {
     background-color: #ffebef;
+  }
+
+  .lg\:focus\:bg-zensurance-green:focus {
+    background-color: #33c0b4;
   }
 
   .lg\:bg-bottom {
@@ -18524,6 +18644,10 @@ table {
     border-color: #ffebef;
   }
 
+  .lg\:border-zensurance-green {
+    border-color: #33c0b4;
+  }
+
   .lg\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -18816,6 +18940,10 @@ table {
     border-color: #ffebef;
   }
 
+  .lg\:hover\:border-zensurance-green:hover {
+    border-color: #33c0b4;
+  }
+
   .lg\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -19106,6 +19234,10 @@ table {
 
   .lg\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
+  }
+
+  .lg\:focus\:border-zensurance-green:focus {
+    border-color: #33c0b4;
   }
 
   .lg\:rounded-none {
@@ -19643,7 +19775,7 @@ table {
   }
 
   .lg\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Montserrat, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .lg\:font-serif {
@@ -21847,6 +21979,10 @@ table {
     color: #ffebef;
   }
 
+  .lg\:text-zensurance-green {
+    color: #33c0b4;
+  }
+
   .lg\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -22139,6 +22275,10 @@ table {
     color: #ffebef;
   }
 
+  .lg\:hover\:text-zensurance-green:hover {
+    color: #33c0b4;
+  }
+
   .lg\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -22429,6 +22569,10 @@ table {
 
   .lg\:focus\:text-pink-lightest:focus {
     color: #ffebef;
+  }
+
+  .lg\:focus\:text-zensurance-green:focus {
+    color: #33c0b4;
   }
 
   .lg\:text-xs {
@@ -23158,6 +23302,10 @@ table {
     background-color: #ffebef;
   }
 
+  .xl\:bg-zensurance-green {
+    background-color: #33c0b4;
+  }
+
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -23450,6 +23598,10 @@ table {
     background-color: #ffebef;
   }
 
+  .xl\:hover\:bg-zensurance-green:hover {
+    background-color: #33c0b4;
+  }
+
   .xl\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -23740,6 +23892,10 @@ table {
 
   .xl\:focus\:bg-pink-lightest:focus {
     background-color: #ffebef;
+  }
+
+  .xl\:focus\:bg-zensurance-green:focus {
+    background-color: #33c0b4;
   }
 
   .xl\:bg-bottom {
@@ -24098,6 +24254,10 @@ table {
     border-color: #ffebef;
   }
 
+  .xl\:border-zensurance-green {
+    border-color: #33c0b4;
+  }
+
   .xl\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -24390,6 +24550,10 @@ table {
     border-color: #ffebef;
   }
 
+  .xl\:hover\:border-zensurance-green:hover {
+    border-color: #33c0b4;
+  }
+
   .xl\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -24680,6 +24844,10 @@ table {
 
   .xl\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
+  }
+
+  .xl\:focus\:border-zensurance-green:focus {
+    border-color: #33c0b4;
   }
 
   .xl\:rounded-none {
@@ -25217,7 +25385,7 @@ table {
   }
 
   .xl\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Montserrat, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .xl\:font-serif {
@@ -27421,6 +27589,10 @@ table {
     color: #ffebef;
   }
 
+  .xl\:text-zensurance-green {
+    color: #33c0b4;
+  }
+
   .xl\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -27713,6 +27885,10 @@ table {
     color: #ffebef;
   }
 
+  .xl\:hover\:text-zensurance-green:hover {
+    color: #33c0b4;
+  }
+
   .xl\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -28003,6 +28179,10 @@ table {
 
   .xl\:focus\:text-pink-lightest:focus {
     color: #ffebef;
+  }
+
+  .xl\:focus\:text-zensurance-green:focus {
+    color: #33c0b4;
   }
 
   .xl\:text-xs {

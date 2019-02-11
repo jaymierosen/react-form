@@ -205,6 +205,7 @@ module.exports = {
       'Ubuntu',
       'Cantarell',
       'Fira Sans',
+      'Montserrat',
       'Droid Sans',
       'Helvetica Neue',
       'sans-serif',
