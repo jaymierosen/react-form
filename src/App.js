@@ -8,30 +8,26 @@ class App extends Component {
     super(props);
     this.state = {
       textFieldVal: '',
-      submissions: []
+      vinNumber: '',
+      vehicleMake: '',
+      vehicleModel: '',
+      vehicleYear: '',
+      vehicleUse: '',
+      km: '',
+      city: '',
+      province: '',
+      postalCode: '',
+      submissions: [],
+      edit: 'Edit'
     };
-    this.handleChangeSelect = this.handleChangeSelect.bind(this);
     this.handleChangeTextField = this.handleChangeTextField.bind(this);
-    this.handleChangeTextArea = this.handleChangeTextArea.bind(this);
     // this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChangeTextField(e) {
     this.setState({
-      textFieldVal: e.target.value
-    });
-  }
-  
-  handleChangeTextArea(e) {
-    this.setState({
-      textAreaVal: e.target.value
-    });
-  }
-
-  handleChangeSelect(e) {
-    this.setState({
-      selectVal: e.target.value
+      textFieldVal: e.target.value,
     });
   }
 
@@ -51,7 +47,7 @@ class App extends Component {
       submissions: [
         ...this.state.submissions,
         {
-          value: this.state.textFieldVal,
+          textField: this.state.textFieldVal,
           done: false,
           id: Math.floor(Math.random() * 10000)
         }
@@ -59,19 +55,18 @@ class App extends Component {
     });
   }
 
-  validate = () => {
-    // Checks data is valid at form level
-    // To pass this check neither field can be empty and they must pass field level validation
-    const person = this.state.fields;    
-    const fieldErrors = this.state.fieldErrors;
-    const errMessages = Object.keys(fieldErrors).filter(k => fieldErrors[k]);
-    if (!person.name) return true;
-    if (!person.email) return true;
-    if (!person.course) return true;
-    if (!person.department) return true;
-    if (errMessages.length) return true;
-    return false;
-  };
+  onEdit = currentSubmission => {
+    this.setState((state, props) => {
+      const submission = state.submissions.map(submission => {
+        return submission.textField
+      });
+      return {
+        ...state,
+        textFieldVal: submission,
+        edit: 'Save'
+      };
+    });
+  }
 
   delete = currentsubmission => {
     //removes the last submission added in the submissions array
@@ -96,32 +91,18 @@ class App extends Component {
       };
     });
   };
-  
-  // check = currentsubmission => {
-  //   this.setState((state) => {
-  //     const newsubmissions = state.submissions.map(submission => {
-  //       return submission.value === currentsubmission.value
-  //         ? { ...submission, done: !submission.done }
-  //         : submission;
-  //     });
-  //     return {
-  //       ...state,
-  //       submissions: newsubmissions
-  //     };
-  //   });
-  // };
 
   render() {
     return (
       <div>
-        <div className="flex container mx-auto px-4">
-        <Title className="flex flex-wrap mx-3 mb-6 py-6 px-3">React Form</Title>
+        <div className="container mx-auto my-4 px-4">
+        <Title className="text-center">React Form</Title>
         </div>
         <div className="flex container mx-auto px-4">
           <section className="w-3/5 flex-1 rounded overflow-hidden border border-zensurance-green py-6 mx-3">
-            <Form handleInputChange={this.handleInputChange} handleChangeTextField={this.handleChangeTextField} handleChangeTextArea={this.handleChangeTextArea} handleChangeSelect={this.handleChangeSelect} handleSubmit={this.handleSubmit} />
+            <Form textFieldVal={this.state.textFieldVal} handleInputChange={this.handleInputChange} handleChangeTextField={this.handleChangeTextField} handleChangeTextArea={this.handleChangeTextArea} handleChangeSelect={this.handleChangeSelect} handleSubmit={this.handleSubmit} />
           </section>
-          <Table submissions={this.state.submissions} onCheck={this.check} onDelete={this.delete} />
+          <Table edit={this.state.edit} submissions={this.state.submissions} onCheck={this.check} onDelete={this.delete} onEdit={this.onEdit} />
         </div>
       </div>
     );

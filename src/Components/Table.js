@@ -3,7 +3,7 @@ import Row from './Row';
 
 const Table = props => {
   return (
-    <Row submissions={props.submissions} onCheck={props.check} onDelete={props.onDelete} />
+    <Row edit={props.edit} submissions={props.submissions} onCheck={props.check} onEdit={props.onEdit} onDelete={props.onDelete} />
   );
 }
 
