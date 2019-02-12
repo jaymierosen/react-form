@@ -15,14 +15,23 @@ const Row = props => {
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Type of Business</div>
             <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.textField}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">VIN Number</div>
-            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.textField}</p>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.vinNumber}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Vehicle Make</div>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.vehicleMake}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Vehicle Model</div>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.vehicleModel}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Vehicle Year</div>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.vehicleYear}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Vehicle Use</div>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.vehicleUse}</p>
+            <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Kilometeres</div>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.km}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">City</div>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.city}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Province</div>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.province}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Postal Code</div>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.postalCode}</p>
             <div key={`buttons-${i}`} className="flex">
               <button
                 className="bg-zensurance-green text-white appearance-none block w-1\/2 text-grey-darker border rounded py-3 px-4 leading-tight"

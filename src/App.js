@@ -25,6 +25,11 @@ class App extends Component {
     this.handleVehicleMake = this.handleVehicleMake.bind(this);
     this.handleVehicleModel = this.handleVehicleModel.bind(this);
     this.handleVehicleYear = this.handleVehicleYear.bind(this);
+    this.handleVehicleUse = this.handleVehicleUse.bind(this);
+    this.handleKm = this.handleKm.bind(this);
+    this.handleCity = this.handleCity.bind(this);
+    this.handleProvince = this.handleProvince.bind(this);
+    this.handlePostalCode = this.handlePostalCode.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -58,25 +63,62 @@ class App extends Component {
     })
   }
 
-  // handleInputChange(event) {
-  //   const target = event.target;
-  //   const value = target.type === 'checkbox' ? target.checked : target.value;
-  //   const name = target.name;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // }
+  handleVehicleUse(e) {
+    this.setState({
+      vehicleUseVal: e.target.value
+    })
+  }
+
+  handleKm(e) {
+    this.setState({
+      kmVal: e.target.value
+    })
+  }
+
+  handleCity(e) {
+    this.setState({
+      cityVal: e.target.value
+    })
+  }
+
+  handleProvince(e) {
+    this.setState({
+      provinceVal: e.target.value
+    })
+  }
+
+  handlePostalCode(e) {
+    this.setState({
+      postalCodeVal: e.target.value
+    })
+  }
 
   handleSubmit(e) {
     e.preventDefault();
     this.setState({
-      textFieldVal: "",
-      vinNumberVal: "",
+      textFieldVal: '',
+      vinNumberVal: '',
+      vehicleMakeVal: '',
+      vehicleModelVal: '',
+      vehicleYearVal: '',
+      vehicleUseVal: '',
+      kmVal: '',
+      cityVal: '',
+      provinceVal: '',
+      postalCodeVal: '',
       submissions: [
         ...this.state.submissions,
         {
           textField: this.state.textFieldVal,
           vinNumber: this.state.vinNumberVal,
+          vehicleMake: this.state.vehicleMakeVal,
+          vehicleModel: this.state.vehicleModelVal,
+          vehicleYear: this.state.vehicleYearVal,
+          vehicleUse: this.state.vehicleUseVal,
+          km: this.state.kmVal,
+          city: this.state.cityVal,
+          province: this.state.provinceVal,
+          postalCode: this.state.postalCodeVal,
           done: false,
           id: Math.floor(Math.random() * 10000)
         }
@@ -138,9 +180,37 @@ class App extends Component {
         </div>
         <div className="flex container mx-auto px-4">
           <section className="w-3/5 flex-1 rounded overflow-hidden border border-zensurance-green py-6 mx-3">
-            <Form textFieldVal={this.state.textFieldVal} vinNumberVal={this.state.vinNumberVal} handleInputChange={this.handleInputChange} handleChangeTextField={this.handleChangeTextField} handleChangeTextArea={this.handleChangeTextArea} handleChangeSelect={this.handleChangeSelect} handleSubmit={this.handleSubmit} />
+            <Form 
+              textFieldVal={this.state.textFieldVal}
+              vinNumberVal={this.state.vinNumberVal} 
+              vehicleMakeVal={this.state.vehicleMakeVal}
+              vehicleModelVal={this.state.vehicleModelVal}
+              vehicleYearVal={this.state.vehicleYearVal}
+              vehicleUseVal={this.state.vehicleUseVal}
+              kmVal={this.state.kmVal}
+              cityVal={this.state.cityVal}
+              provinceVal={this.state.provinceVal}
+              postalCodeVal={this.state.postalCodeVal}
+              handleChangeTextField={this.handleChangeTextField}
+              handleChangeVinNumber={this.handleChangeVinNumber}
+              handleVehicleMake={this.handleVehicleMake}
+              handleVehicleModel={this.handleVehicleModel}
+              handleVehicleYear={this.handleVehicleYear}
+              handleVehicleUse={this.handleVehicleUse}
+              handleKm={this.handleKm}
+              handleCity={this.handleCity}
+              handleProvince={this.handleProvince}
+              handlePostalCode={this.handlePostalCode}
+              handleSubmit={this.handleSubmit}
+            />
           </section>
-          <Table edit={this.state.edit} submissions={this.state.submissions} onCheck={this.check} onDelete={this.delete} onEdit={this.onEdit} />
+          <Table 
+            edit={this.state.edit}
+            submissions={this.state.submissions}
+            onCheck={this.check}
+            onDelete={this.delete}
+            onEdit={this.onEdit}
+          />
         </div>
       </div>
     );
