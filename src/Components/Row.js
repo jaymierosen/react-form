@@ -15,6 +15,7 @@ const Row = props => {
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Type of Business</div>
             <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.textField}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">VIN Number</div>
+            <p className="block text-left tracking-wide text-zensurance-green text-xs mb-2">{submission.textField}</p>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Vehicle Make</div>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Vehicle Model</div>
             <div className="block text-left uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">Vehicle Year</div>

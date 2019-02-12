@@ -8,27 +8,54 @@ class App extends Component {
     super(props);
     this.state = {
       textFieldVal: '',
-      vinNumber: '',
-      vehicleMake: '',
-      vehicleModel: '',
-      vehicleYear: '',
-      vehicleUse: '',
-      km: '',
-      city: '',
-      province: '',
-      postalCode: '',
+      vinNumberVal: '',
+      vehicleMakeVal: '',
+      vehicleModelVal: '',
+      vehicleYearVal: '',
+      vehicleUseVal: '',
+      kmVal: '',
+      cityVal: '',
+      provinceVal: '',
+      postalCodeVal: '',
       submissions: [],
       edit: 'Edit'
     };
     this.handleChangeTextField = this.handleChangeTextField.bind(this);
-    // this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleChangeVinNumber = this.handleChangeVinNumber.bind(this);
+    this.handleVehicleMake = this.handleVehicleMake.bind(this);
+    this.handleVehicleModel = this.handleVehicleModel.bind(this);
+    this.handleVehicleYear = this.handleVehicleYear.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChangeTextField(e) {
     this.setState({
-      textFieldVal: e.target.value,
+      textFieldVal: e.target.value
     });
+  }
+
+  handleChangeVinNumber(e) {
+    this.setState({
+      vinNumberVal: e.target.value
+    });
+  }
+
+  handleVehicleMake(e) {
+    this.setState({
+      vehicleMakeVal: e.target.value
+    });
+  }
+
+  handleVehicleModel(e) {
+    this.setState({
+      vehicleModelVal: e.target.value
+    })
+  }
+
+  handleVehicleYear(e) {
+    this.setState({
+      vehicleYearVal: e.target.value
+    })
   }
 
   // handleInputChange(event) {
@@ -44,10 +71,12 @@ class App extends Component {
     e.preventDefault();
     this.setState({
       textFieldVal: "",
+      vinNumberVal: "",
       submissions: [
         ...this.state.submissions,
         {
           textField: this.state.textFieldVal,
+          vinNumber: this.state.vinNumberVal,
           done: false,
           id: Math.floor(Math.random() * 10000)
         }
@@ -55,17 +84,26 @@ class App extends Component {
     });
   }
 
-  onEdit = currentSubmission => {
+  onEdit = currentsubmission => {
     this.setState((state, props) => {
-      const submission = state.submissions.map(submission => {
-        return submission.textField
+      const submission = state.submissions.map((submission) => {
+        return submission.textField;
       });
-      return {
-        ...state,
-        textFieldVal: submission,
-        edit: 'Save'
-      };
+      if(this.state.edit === 'Save'){
+        return {
+          ...state,
+          textFieldVal: submission,
+          edit: 'Edit'
+        };
+      } else {
+        return {
+          ...state,
+          textFieldVal: submission,
+          edit: 'Save'
+        };
+      }
     });
+    
   }
 
   delete = currentsubmission => {
@@ -100,7 +138,7 @@ class App extends Component {
         </div>
         <div className="flex container mx-auto px-4">
           <section className="w-3/5 flex-1 rounded overflow-hidden border border-zensurance-green py-6 mx-3">
-            <Form textFieldVal={this.state.textFieldVal} handleInputChange={this.handleInputChange} handleChangeTextField={this.handleChangeTextField} handleChangeTextArea={this.handleChangeTextArea} handleChangeSelect={this.handleChangeSelect} handleSubmit={this.handleSubmit} />
+            <Form textFieldVal={this.state.textFieldVal} vinNumberVal={this.state.vinNumberVal} handleInputChange={this.handleInputChange} handleChangeTextField={this.handleChangeTextField} handleChangeTextArea={this.handleChangeTextArea} handleChangeSelect={this.handleChangeSelect} handleSubmit={this.handleSubmit} />
           </section>
           <Table edit={this.state.edit} submissions={this.state.submissions} onCheck={this.check} onDelete={this.delete} onEdit={this.onEdit} />
         </div>
